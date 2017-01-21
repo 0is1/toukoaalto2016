@@ -9,7 +9,7 @@
 * @author         Janne Saarela
 * @version        Release: 0.1.0
 * @filesource     wp-content/themes/toukoaalto2017/front-page.php
-* @since          available since Release 0.1.2
+* @since          available since Release 0.1.0
 */
 ?>
 

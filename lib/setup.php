@@ -3,6 +3,7 @@
 namespace Roots\Sage\Setup;
 
 use Roots\Sage\Assets;
+use Walker_Nav_Menu;
 
 /**
  * Theme setup
@@ -118,3 +119,17 @@ function image_setup() {
 	add_image_size( 'thumbnail-wide-lg', 1200, 700 );
 }
 add_action( 'after_setup_theme', __NAMESPACE__ . '\\image_setup' );
+
+class Bootstrap_Walker extends Walker_Nav_Menu {
+	/**
+	 * @see Walker::start_lvl()
+	 * @since 0.1.0
+	 *
+	 * @param string $output Passed by reference. Used to append additional content.
+	 * @param int $depth Depth of page. Used for padding.
+	 */
+	public function start_lvl( &$output, $depth = 0, $args = array() ) {
+		$indent = str_repeat( "\t", $depth );
+		$output .= "\n$indent<ul role=\"menu\" class=\"dropdown-menu\">\n";
+	}
+}
