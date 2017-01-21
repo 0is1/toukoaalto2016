@@ -1,0 +1,308 @@
+{
+    "key": "group_58834eb558af7",
+    "title": "Teeman asetukset",
+    "fields": [
+        {
+            "placement": "top",
+            "endpoint": 1,
+            "key": "field_58834f33ead4f",
+            "label": "Yleisasetukset",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "return_format": "id",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "key": "field_588385a741c5f",
+            "label": "Sivuston yl\u00e4palkin kuva",
+            "name": "page_header_image",
+            "type": "image",
+            "instructions": "Sivuston yl\u00e4palkissa n\u00e4ytett\u00e4v\u00e4 kuva",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": 0,
+            "message": "",
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "key": "field_58834f7986b4e",
+            "label": "N\u00e4yt\u00e4 blogitekstit etusivulla",
+            "name": "enable_wp_posts_newsfeed",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": 5,
+            "min": 1,
+            "max": 15,
+            "step": 1,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "key": "field_588352eb22888",
+            "label": "N\u00e4ytett\u00e4vien blogikirjoitusten m\u00e4\u00e4r\u00e4",
+            "name": "wp_blog_visible_posts_count",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": 0,
+            "message": "",
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "key": "field_58835403a0ef0",
+            "label": "N\u00e4yt\u00e4 Twitter-laatikko etusivulla",
+            "name": "enable_twitter_follow_box",
+            "type": "true_false",
+            "instructions": "M\u00e4\u00e4ritt\u00e4\u00e4, n\u00e4ytet\u00e4\u00e4nk\u00f6 Twitter-sivun laatikko etusivulla (vaatii, ett\u00e4 Twitter k\u00e4ytt\u00e4j\u00e4tunnus on asetettu sosiaalisen median asetukset)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": 0,
+            "message": "",
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "key": "field_58834faadae10",
+            "label": "N\u00e4yt\u00e4 viimeisimm\u00e4t sosiaalisen median sis\u00e4ll\u00f6t etusivulla",
+            "name": "enable_activity_feed",
+            "type": "true_false",
+            "instructions": "Faebook, Twitter, Instagram",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "key": "field_5883737c9a1d4",
+            "label": "Sosiaalisen median sy\u00f6tteen tunniste",
+            "name": "activity_feed_id",
+            "type": "text",
+            "instructions": "Halutun Activity Feed-palvelun sy\u00f6tteen tunniste",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": 10,
+            "min": 1,
+            "max": 30,
+            "step": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "key": "field_588373e78eeed",
+            "label": "N\u00e4ytett\u00e4vien sosiaalisen median sy\u00f6tteen sis\u00e4lt\u00f6jen m\u00e4\u00e4r\u00e4",
+            "name": "activity_feed_limit",
+            "type": "number",
+            "instructions": "Kuinka monta viimeisint\u00e4 p\u00e4ivityst\u00e4 n\u00e4ytet\u00e4\u00e4n?",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "placement": "top",
+            "endpoint": 0,
+            "key": "field_58834ff82d6a3",
+            "label": "Sosiaalisen median asetukset",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": 0,
+            "message": "",
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "key": "field_588354e30bca6",
+            "label": "N\u00e4yt\u00e4 linkit eri palveluihin sivustolla",
+            "name": "enable_links_on_site",
+            "type": "true_false",
+            "instructions": "N\u00e4ytet\u00e4\u00e4nk\u00f6 linkit Facebook-, Twitter-, Instagram-, Blogi- ja Lahjoitussivuille, jos ne ovat asetettu.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": "",
+            "min": "",
+            "max": "",
+            "step": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "key": "field_58835061d8bd8",
+            "label": "Facebook ID",
+            "name": "facebook_id",
+            "type": "number",
+            "instructions": "Facebook-sivun id (http:\/\/findmyfbid.com\/)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "key": "field_588350cad8bd9",
+            "label": "Twitter k\u00e4ytt\u00e4j\u00e4nimi",
+            "name": "twitter_username",
+            "type": "text",
+            "instructions": "Twitterin k\u00e4ytt\u00e4j\u00e4tunnus ilman @-merkki\u00e4",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "key": "field_588350efd8bda",
+            "label": "Instagram k\u00e4ytt\u00e4j\u00e4nimi",
+            "name": "instagram_username",
+            "type": "text",
+            "instructions": "Instagram k\u00e4ytt\u00e4j\u00e4nimi ilman @-merkki\u00e4",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": "",
+            "placeholder": "",
+            "key": "field_58835188d8bdb",
+            "label": "Blogiosoite",
+            "name": "blog_url",
+            "type": "url",
+            "instructions": "Blogin osoite, esim. http:\/\/toukoalto.puheenvuoro.uusisuomi.fi\/",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": "",
+            "placeholder": "",
+            "key": "field_588356120bca7",
+            "label": "Lahjoituslinkki",
+            "name": "donate_url",
+            "type": "url",
+            "instructions": "Lahjoituspalvelun osoite",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "theme-general-settings"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1485040921
+}
