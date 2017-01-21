@@ -27,7 +27,7 @@ $query = new WP_Query(
 ?>
 <?php if ( $query->have_posts() ) : ?>
     <div class="newsfeed-logo">
-       <h1><?php _e( 'Posts', THEME_SLUG ); ?></h1>
+       <h1><?php _e( 'Latest posts', THEME_SLUG ); ?></h1>
    </div>
 	<?php while ( $query->have_posts() ) : $query->the_post(); ?>
         <article <?php post_class();?>>
