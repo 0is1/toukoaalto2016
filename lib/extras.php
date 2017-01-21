@@ -64,8 +64,11 @@ add_action( 'pre_get_posts', __NAMESPACE__ . '\\add_rss_post_type_to_archive_que
 * @since  0.1.0
 */
 function menu_description( $item_output, $item, $depth, $args ) {
+
 	if ( in_array( 'menu-item-has-children', $item->classes ) ) {
 		$item_output = str_replace( '<a', '<a data-toggle="dropdown" class="nav-link dropdown-toggle"', $item_output );
+	} else if ( 0 == $depth ) {
+		$item_output = str_replace( '<a', '<a class="nav-link"', $item_output );
 	}
 	return $item_output;
 }
@@ -77,8 +80,10 @@ add_filter( 'walker_nav_menu_start_el', __NAMESPACE__ . '\\menu_description', 10
 function nav_class( $classes, $item ) {
 	if ( $item->menu_item_parent ) {
 		$classes[] = 'dropdown-item';
-	} else {
+	} else if ( in_array( 'menu-item-has-children', $classes ) ) {
 		$classes[] = 'nav-item dropdown';
+	} else {
+		$classes[] = 'nav-item';
 	}
 	return $classes;
 }
