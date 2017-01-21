@@ -5,11 +5,11 @@
 *
 *
 * @file           front-page.php
-* @package        Touko The Politician
+* @package        Touko Aalto 2017
 * @author         Janne Saarela
-* @version        Release: 0.9.2
-* @filesource     wp-content/themes/touko-the-politician/front-page.php
-* @since          available since Release 0.9.2
+* @version        Release: 0.1.0
+* @filesource     wp-content/themes/toukoaalto2017/front-page.php
+* @since          available since Release 0.1.2
 */
 ?>
 
