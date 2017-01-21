@@ -1,0 +1,22 @@
+.nav-primary{
+    .dropdown{
+        &:hover{
+            .dropdown-toggle{
+                background-color: $brand-secondary;
+                color: $white;
+            }
+            .dropdown-menu{
+                display: block;
+            }
+        }
+        .dropdown-menu{
+            margin-top: -2px;
+        }
+    }
+    .current-menu-item{
+        background-color: $brand-secondary;
+        > a{
+            color: $white;
+        }
+    }
+}
