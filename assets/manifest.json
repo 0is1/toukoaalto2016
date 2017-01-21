@@ -1,0 +1,32 @@
+{
+    "dependencies": {
+        "main.js": {
+            "files": [
+                "scripts/main.js"
+            ],
+            "main": true
+        },
+        "main.css": {
+            "files": [
+                "styles/main.scss"
+            ],
+            "main": true
+        },
+        "customizer.js": {
+            "files": [
+                "scripts/customizer.js"
+            ]
+        },
+        "echo.min.js": {
+            "files": [
+                "scripts/echo.min.js"
+            ]
+        },
+        "jquery.js": {
+            "bower": ["jquery"]
+        }
+    },
+    "config": {
+        "devUrl": "http://touko-base.local"
+    }
+}

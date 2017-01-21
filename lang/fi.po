@@ -1,0 +1,278 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2017-01-21 17:49+0200\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Janne Saarela <janne.saarela@kehittamo.fi>\n"
+"Language-Team: \n"
+"Language: fi_FI\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.11\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: 404.php:4
+msgid "Sorry, but the page you were trying to view does not exist."
+msgstr "Etsimääsi sivua ei löydy"
+
+#: base.php:14
+msgid ""
+"You are using an <strong>outdated</strong> browser. Please <a href=\"http://"
+"browsehappy.com/\">upgrade your browser</a> to improve your experience."
+msgstr ""
+"Käytössäsi on <strong>vanhentunut</strong> selain, mikä ei välttämättä tue "
+"sivun vaatimia tekniikoita. Ole hyvä ja <a href=\"http://browsehappy.com/"
+"\">päivitä</a> käyttämäsi selain."
+
+#: functions.php:45
+#, php-format
+msgid "Error locating %s for inclusion"
+msgstr ""
+
+#: index.php:5 search.php:5
+msgid "Sorry, no results were found."
+msgstr "Ei hakutuloksia"
+
+#: lib/activityfeed.php:74
+msgid "Social media feed"
+msgstr "Some"
+
+#: lib/activityfeed.php:100
+msgid "JSON data is null"
+msgstr "Syötteen palauttama data on tyhjä"
+
+#: lib/activityfeed.php:104
+msgid "feed_id is empty"
+msgstr "syötteen tunniste on tyhjä"
+
+#: lib/activityfeed.php:162
+#, php-format
+msgctxt "%s = service name"
+msgid "shared on %s"
+msgstr ""
+
+#: lib/activityfeed.php:190
+#, php-format
+msgctxt "%s = human-readable time difference"
+msgid "%s ago"
+msgstr "%s sitten"
+
+#: lib/extras.php:31
+msgid "Continued"
+msgstr "Lue lisää"
+
+#: lib/extras.php:37
+msgid "Theme General Settings"
+msgstr "Teeman yleiset asetukset"
+
+#: lib/extras.php:38
+msgid "Theme Settings"
+msgstr "Teeman asetukset"
+
+#: lib/rss-post-type.php:25 lib/rss-post-type.php:26
+msgid "RSS Posts"
+msgstr "RSS Artikkelit"
+
+#: lib/rss-post-type.php:27
+msgid "All RSS Posts"
+msgstr "Kaikki RSS artikkelit"
+
+#: lib/rss-post-type.php:28 lib/rss-post-type.php:29
+msgid "Add New RSS Post"
+msgstr "Lisää uusi RSS artikkeli"
+
+#: lib/rss-post-type.php:30 lib/rss-post-type.php:31
+msgid "Edit RSS Post"
+msgstr "Muokkaa RSS artikkelia"
+
+#: lib/rss-post-type.php:32
+msgid "New RSS Post"
+msgstr "Uusi RSS artikkeli"
+
+#: lib/rss-post-type.php:33
+msgid "View RSS Post"
+msgstr "Näytä RSS artikkeli"
+
+#: lib/rss-post-type.php:34
+msgid "Search RSS Posts"
+msgstr "Etsi RSS artikkeleita"
+
+#: lib/rss-post-type.php:35
+msgid "Nothing found in the Database."
+msgstr "Tietokannasta ei löydy mitään."
+
+#: lib/rss-post-type.php:36
+msgid "Nothing found in Trash"
+msgstr "Mitään ei löydy roskakorista"
+
+#: lib/rss-post-type.php:39
+msgid "RSS Post custom post type"
+msgstr ""
+
+#: lib/rss-post-type.php:72
+msgid "RSS Posts Categories"
+msgstr "RSS kategoriat"
+
+#: lib/rss-post-type.php:73
+msgid "RSS Posts Category"
+msgstr "Rss artikkelin kategoria"
+
+#: lib/rss-post-type.php:74
+msgid "Search RSS Posts Categories"
+msgstr "Etsi RSS kategorioita"
+
+#: lib/rss-post-type.php:75
+msgid "All RSS Posts Categories"
+msgstr "Kaikki RSS kategoriat"
+
+#: lib/rss-post-type.php:76
+msgid "Parent RSS Posts Category"
+msgstr ""
+
+#: lib/rss-post-type.php:77
+msgid "Parent RSS Posts Category:"
+msgstr ""
+
+#: lib/rss-post-type.php:78
+msgid "Edit RSS Posts Category"
+msgstr "Muokkaa RSS kategoriaa"
+
+#: lib/rss-post-type.php:79
+msgid "Update RSS Posts Category"
+msgstr "Päivitä RSS kategoria"
+
+#: lib/rss-post-type.php:80
+msgid "Add New RSS Posts Category"
+msgstr "Lisää uusi RSS kategoria"
+
+#: lib/rss-post-type.php:81
+msgid "New RSS Posts Category Name"
+msgstr "RSS kategorian nimi"
+
+#: lib/rss-post-type.php:94
+msgid "RSS Posts Tags"
+msgstr "RSS avainsanat"
+
+#: lib/rss-post-type.php:95
+msgid "RSS Posts Tag"
+msgstr "RSS avainsana"
+
+#: lib/rss-post-type.php:96
+msgid "Search RSS Posts Tags"
+msgstr "Etsi RSS avainsanoja"
+
+#: lib/rss-post-type.php:97
+msgid "All RSS Posts Tags"
+msgstr "Kaikki RSS avainsanat"
+
+#: lib/rss-post-type.php:98
+msgid "Parent RSS Posts Tag"
+msgstr ""
+
+#: lib/rss-post-type.php:99
+msgid "Parent RSS Posts Tag:"
+msgstr ""
+
+#: lib/rss-post-type.php:100
+msgid "Edit RSS Posts Tag"
+msgstr "Muokkaa RSS avainsanaa"
+
+#: lib/rss-post-type.php:101
+msgid "Update RSS Posts Tag"
+msgstr "Päivitä RSS avainsana"
+
+#: lib/rss-post-type.php:102
+msgid "Add New RSS Posts Tag"
+msgstr "Lisää uusi RSS avainsana"
+
+#: lib/rss-post-type.php:103
+msgid "New RSS Posts Tag Name"
+msgstr "RSS avainsanan nimi"
+
+#: lib/setup.php:30
+msgid "Primary Navigation"
+msgstr "Päävalikko"
+
+#: lib/setup.php:58
+msgid "Primary"
+msgstr "Ensisijainen"
+
+#: lib/setup.php:67
+msgid "Footer"
+msgstr "Alapalkki"
+
+#: lib/titles.php:13
+msgid "Latest Posts"
+msgstr "Viimeisimmät artikkelit"
+
+#: lib/titles.php:18
+#, php-format
+msgid "Search Results for %s"
+msgstr "Tulokset hakusanalle %s"
+
+#: lib/titles.php:20
+msgid "Not Found"
+msgstr "Ei löytynyt"
+
+#: templates/comments.php:9
+#, php-format
+msgctxt "comments title"
+msgid "One response to &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s responses to &ldquo;%2$s&rdquo;"
+msgstr[0] "Yksi kommentti &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s kommenttia &ldquo;%2$s&rdquo;"
+
+#: templates/comments.php:19
+msgid "&larr; Older comments"
+msgstr "&larr; Vanhemmat kommentit"
+
+#: templates/comments.php:22
+msgid "Newer comments &rarr;"
+msgstr "Uudemmat kommentit &rarr;"
+
+#: templates/comments.php:31
+msgid "Comments are closed."
+msgstr "Kommentointi on suljettu."
+
+#: templates/content-page.php:2 templates/content-single.php:11
+msgid "Pages:"
+msgstr "Sivut:"
+
+#: templates/entry-meta.php:2
+msgid "By"
+msgstr "Kirjoittanut"
+
+#: templates/homepage-posts.php:30
+msgid "Posts"
+msgstr "Artikkelit"
+
+#: templates/homepage-posts.php:48
+msgid "All Posts"
+msgstr "Kaikki artikkelit"
+
+#: templates/homepage-posts.php:49
+msgid "All Posts &raquo;"
+msgstr "Kaikki artikkelit &raquo;"
+
+#. Theme Name of the plugin/theme
+msgid "Touko Aalto 2017"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "https://github.com/0is1/toukoaalto2017"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Touko Aalto 2017 is WordPress theme built on Sage. <a href=\"https://github."
+"com/roots/sage\">Contribute on GitHub</a>"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Janne Saarela"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://jannesaarela.fi/"
+msgstr ""

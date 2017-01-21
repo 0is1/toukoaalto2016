@@ -1,10 +1,35 @@
 {
-    "name": "0is1/toukoaalto2017",
-    "version": "master",
-    "type": "wordpress-theme",
-    "source": {
-        "url": "https://github.com/0is1/toukoaalto2017.git",
-        "type": "git",
-        "reference": "master"
+  "name": "0is1/toukoaalto2017",
+  "version": "master",
+  "type": "wordpress-theme",
+  "source": {
+    "url": "https://github.com/0is1/toukoaalto2017.git",
+    "type": "git",
+    "reference": "master"
+  },
+  "license": "MIT",
+  "description": "The best WordPress starter theme with a modern front-end development workflow. Based on HTML5 Boilerplate, gulp, Bower, and Bootstrap.",
+  "homepage": "https://roots.io/sage/",
+  "authors": [{
+      "name": "Ben Word",
+      "email": "ben@benword.com",
+      "homepage": "https://github.com/retlehs"
+    },
+    {
+      "name": "Scott Walkinshaw",
+      "email": "scott.walkinshaw@gmail.com",
+      "homepage": "https://github.com/swalkinshaw"
     }
+  ],
+  "keywords": [
+    "wordpress"
+  ],
+  "support": {
+    "issues": "https://github.com/roots/sage/issues",
+    "forum": "https://discourse.roots.io/"
+  },
+  "require": {
+    "php": ">=5.4.0",
+    "composer/installers": "~1.0"
+  }
 }
