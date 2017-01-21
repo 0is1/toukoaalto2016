@@ -1,0 +1,10 @@
+{
+    "name": "0is1/toukoaalto2017",
+    "version": "master",
+    "type": "wordpress-theme",
+    "source": {
+        "url": "https://github.com/0is1/toukoaalto2017.git",
+        "type": "git",
+        "reference": "master"
+    }
+}
