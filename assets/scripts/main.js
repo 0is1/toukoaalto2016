@@ -20,6 +20,12 @@
             init: function() {
                 // JavaScript to be fired on all pages
                 echo.init({offset: 1500, throttle: 250, unload: false});
+                $('.js-main-menu .current-menu-item').each(function(){
+                    var hasParentMenuItem = $(this).parents('.menu-item-has-children');
+                    if(hasParentMenuItem.length == 1){
+                        $(hasParentMenuItem[0]).addClass('current-menu-item');
+                    }
+                });
             },
             finalize: function() {
                 // JavaScript to be fired on all pages, after page specific JS is fired
