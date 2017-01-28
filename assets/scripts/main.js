@@ -45,6 +45,8 @@
                     }
                 };
                 var waiting = false;
+                // Check position on load too
+                scroll();
                 $(window).scroll(function() {
                     if (waiting) {
                         return;
