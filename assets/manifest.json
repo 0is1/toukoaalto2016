@@ -22,6 +22,11 @@
                 "scripts/echo.min.js"
             ]
         },
+        "ofi.min.js": {
+            "files": [
+                "scripts/ofi.min.js"
+            ]
+        },
         "jquery.js": {
             "bower": ["jquery"]
         }

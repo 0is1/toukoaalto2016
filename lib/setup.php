@@ -82,11 +82,11 @@ function display_sidebar() {
 	static $display;
 
 	isset( $display ) || $display = ! in_array(true, [
-        // The sidebar will NOT be displayed if ANY of the following return true.
-        // @link https://codex.wordpress.org/Conditional_Tags
-        is_404(),
-        is_front_page(),
-        is_page_template( 'template-custom.php' ),
+		// The sidebar will NOT be displayed if ANY of the following return true.
+		// @link https://codex.wordpress.org/Conditional_Tags
+		is_404(),
+		is_front_page(),
+		is_page_template( 'template-custom.php' ),
 		is_page(),
 	]);
 
@@ -104,6 +104,7 @@ function assets() {
 	}
 
 	wp_enqueue_script( 'echo', Assets\asset_path( 'scripts/echo.min.js' ), null, null, true );
+	wp_enqueue_script( 'ofi', Assets\asset_path( 'scripts/ofi.min.js' ), null, null, true );
 	wp_enqueue_script( 'sage/js', Assets\asset_path( 'scripts/main.js' ), [ 'jquery' ], null, true );
 }
 
@@ -113,10 +114,11 @@ add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100 );
 * Add custom image sizes
 */
 function image_setup() {
-	add_image_size( 'thumbnail-wide-xs', 180, 100 );
-	add_image_size( 'thumbnail-wide-sm', 350, 200 );
-	add_image_size( 'thumbnail-wide-md', 600, 350 );
-	add_image_size( 'thumbnail-wide-lg', 1200, 700 );
+	add_image_size( IMAGE_SIZE_WIDE_XS, 180, 100 );
+	add_image_size( IMAGE_SIZE_WIDE_SM, 350, 200 );
+	add_image_size( IMAGE_SIZE_WIDE_MD, 600, 350 );
+	add_image_size( IMAGE_SIZE_WIDE_LG, 1200, 700 );
+	add_image_size( IMAGE_SIZE_WIDE_XL, 1920, 1100 );
 }
 add_action( 'after_setup_theme', __NAMESPACE__ . '\\image_setup' );
 
