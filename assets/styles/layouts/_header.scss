@@ -20,6 +20,15 @@
             }
         }
     }
+    &.home{
+        .main-header{
+            &__container{
+                .brand{
+                    color: $brand-primary;
+                }
+            }
+        }
+    }
 }
 .main-header{
     min-height: 100px;
