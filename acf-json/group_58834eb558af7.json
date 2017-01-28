@@ -20,7 +20,7 @@
         },
         {
             "return_format": "id",
-            "preview_size": "thumbnail",
+            "preview_size": "thumbnail-wide-sm",
             "library": "all",
             "min_width": "",
             "min_height": "",
@@ -34,6 +34,25 @@
             "name": "page_header_image",
             "type": "image",
             "instructions": "Sivuston yl\u00e4palkissa n\u00e4ytett\u00e4v\u00e4 kuva",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": "Kansanedustaja, Vihreiden varapuheenjohtaja ja kaupunginvaltuutettu Jyv\u00e4skyl\u00e4st\u00e4",
+            "new_lines": "br",
+            "maxlength": "",
+            "placeholder": "",
+            "rows": "",
+            "key": "field_588cf054651c5",
+            "label": "Sivuston yl\u00e4palkin teksti",
+            "name": "page_header_text",
+            "type": "textarea",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -304,5 +323,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1485040921
+    "modified": 1485636495
 }
