@@ -1,0 +1,44 @@
+.scrolling{
+    .main-header{
+        &__container{
+            background-color: $white;
+            height: 5rem;
+            left: 0;
+            position: fixed;
+            top: 0;
+            width: 100vw;
+            z-index: $z-index-default;
+            @include media-breakpoint-up(md){
+                height: auto;
+            }
+            .brand{
+                color: $brand-primary;
+                font-size: 3rem;
+                @include media-breakpoint-up(md){
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+}
+.main-header{
+    min-height: 100px;
+    &__container{
+        position: relative;
+        transition: all $default-transition;
+        z-index: $z-index-default;
+        .brand{
+            color: $brand-primary;
+            font-size: 4rem;
+        }
+    }
+}
+.home{
+    .main-header{
+        &__container{
+            .brand{
+                color: $white;
+            }
+        }
+    }
+}

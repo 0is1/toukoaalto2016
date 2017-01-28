@@ -1,0 +1,51 @@
+.scrolling {
+    .home__hero {
+        opacity: 0;
+    }
+}
+
+.home {
+    &__wrapper {
+        margin-top: $home-margin-top;
+        transition: all $default-transition;
+        > * {
+            &:not(:first-of-type) {
+                margin-top: 4rem;
+                position: relative;
+                z-index: $z-index-hero;
+            }
+        }
+    }
+
+    &__hero {
+        @include full-screen-container($hero-heigth, 100vw);
+        transition: opacity 0.5s;
+        z-index: $z-index-hero;
+        &:hover {
+            img{
+                filter: invert(20%) blur(2px);
+                transform: scale(1.01);
+            }
+        }
+        img {
+            @include object-fit(cover);
+            filter: invert(10%);
+            height: $hero-heigth;
+            position: absolute;
+            transition: all $default-transition;
+            width: 100vw;
+        }
+
+        h3 {
+            color: $white;
+            margin-top: 30vh;
+            position: relative;
+            text-align: center;
+            z-index: $z-index-default;
+        }
+    }
+
+    #twitteraccountbox {
+        margin: 0 auto;
+    }
+}
