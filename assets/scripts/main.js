@@ -20,12 +20,45 @@
             init: function() {
                 // JavaScript to be fired on all pages
                 echo.init({offset: 1500, throttle: 250, unload: false});
-                $('.js-main-menu .current-menu-item').each(function(){
+
+                // MENUS
+                $('a[data-action="toggle-main-menu"]').click(function(e){
+                    e.preventDefault();
+                    $('body, html').toggleClass('no-scroll');
+                    $(this).parent('.js-menu-container').toggleClass('open');
+                });
+                $('.js-main-menu .current-menu-item').each(function() {
                     var hasParentMenuItem = $(this).parents('.menu-item-has-children');
-                    if(hasParentMenuItem.length == 1){
+                    if (hasParentMenuItem.length == 1) {
                         $(hasParentMenuItem[0]).addClass('current-menu-item');
                     }
                 });
+
+                var scroll = function() {
+                    var scrollTop = $(document).scrollTop();
+                    var treshold = parseInt(($(window).height() / 2) * 0.65, 10);
+                    var className = 'scrolling';
+                    if(!$('body').hasClass(className) && scrollTop >= treshold){
+                        $('body').addClass(className);
+                    } else if($('body').hasClass(className) && scrollTop < treshold){
+                        $('body').removeClass(className);
+                    }
+                };
+                var waiting = false;
+                $(window).scroll(function() {
+                    if (waiting) {
+                        return;
+                    }
+                    waiting = true;
+
+                    scroll();
+
+                    setTimeout(function() {
+                        waiting = false;
+                    }, 50);
+                });
+
+                objectFitImages('img.js-object-fit');
             },
             finalize: function() {
                 // JavaScript to be fired on all pages, after page specific JS is fired
