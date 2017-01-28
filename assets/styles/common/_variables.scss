@@ -3,6 +3,20 @@ $enable-flex: true;
 $main-sm-columns: 12;
 $sidebar-sm-columns: 4;
 
+$grid-breakpoints: (
+    xs: 0,
+    sm: 568px,
+    md: 768px,
+    lg: 992px,
+    xl: 1280px,
+    xxl: 1920px,
+);
+
+$hero-heigth: 65vh;
+$home-margin-top: 55vh;
+$z-index-hero: 0;
+$z-index-default: 1;
+
 // Colors
 $brand-primary: #27ae60;
 $brand-secondary: #e46363;
@@ -11,6 +25,20 @@ $white: #f7f7f7;
 $enable-transitions: true;
 $enable-print-styles: true;
 
-$border-radius:     2px;
+$border-radius: 2px;
 $nav-pills-active-link-color: $white;
-$nav-pills-active-link-bg:    $brand-secondary;
+$nav-pills-active-link-bg: $brand-secondary;
+
+// Animations
+$default-transition: .5s ease-in-out;
+
+// Typography
+$font-primary: 'Open Sans', 'Arial', 'sans-serif';
+
+$base-font-size: 12px;
+$base-font-size-sm: 14px;
+$base-font-size-md: 16px;
+$base-font-size-lg: 18px;
+
+$font-light: 200;
+$line-height: 1.4;

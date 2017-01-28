@@ -1,1 +1,13 @@
+html, body{
+    &.no-scroll{
+        overflow: hidden;
+    }
+}
+html {
+    @include fatness( font-size, $base-font-size, $base-font-size-sm, $base-font-size-md, $base-font-size-lg );
+}
 
+body {
+    font-family: $font-primary;
+    line-height: $line-height;
+}
