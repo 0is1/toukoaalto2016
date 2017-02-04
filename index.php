@@ -11,4 +11,8 @@
 	<?php get_template_part( 'templates/content', get_post_type() != 'post' ? get_post_type() : get_post_format() ); ?>
 <?php endwhile; ?>
 
-<?php the_posts_navigation(); ?>
+<?php $args = array(
+    'prev_text' => __( '&laquo; Vanhemmat artikkelit', THEME_SLUG ),
+    'next_text' => __( 'Uudemmat artikkelit &raquo;', THEME_SLUG ),
+); ?>
+<?php the_posts_navigation( $args ); ?>
