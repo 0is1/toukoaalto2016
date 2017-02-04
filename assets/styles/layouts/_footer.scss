@@ -1,0 +1,29 @@
+.site-footer{
+    background-color: $brand-primary;
+    margin-top: 1rem;
+    padding: 1rem;
+    width: 100vw;
+    &__wrapper{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &__section{
+        margin-top: 1rem;
+        padding: 0 2rem 0 0;
+        @include media-breakpoint-up(sm){
+            max-width: 50%;
+        };
+    }
+    &__logo{
+        max-width: 100%;
+        width: 100%;
+    }
+    p, h3{
+        color: $white;
+    }
+    a{
+        color: $white;
+    }
+}
