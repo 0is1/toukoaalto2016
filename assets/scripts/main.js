@@ -33,10 +33,9 @@
                         $(hasParentMenuItem[0]).addClass('current-menu-item');
                     }
                 });
-
                 var scroll = function() {
                     var scrollTop = $(document).scrollTop();
-                    var treshold = parseInt(($(window).height() / 2) * 0.65, 10);
+                    var treshold = parseInt(($(window).height() / 2) * 0.85, 10);
                     var className = 'scrolling';
                     if(!$('body').hasClass(className) && scrollTop >= treshold){
                         $('body').addClass(className);
