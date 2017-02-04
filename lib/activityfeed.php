@@ -1,6 +1,7 @@
 <?php
 
 namespace Roots\Sage\AF;
+use Roots\Sage\Assets;
 
 /**
  * Get bundle data
@@ -71,7 +72,7 @@ function display_activity_feed() {
 
     	$the_feed = parse_json_data( $feed_json, $feed_id );
     	?>
-		<h1 class="activity-feed__title"><?php _e( 'Social media feed', THEME_SLUG ); ?></h1>
+		<h1 class="home__main-header activity-feed__title"><?php _e( 'Social media feed', THEME_SLUG ); ?></h1>
 		<ul class="activity-feed__data">
 		<?php
     	if ( ! empty( $the_feed ) ) {
@@ -126,17 +127,17 @@ function parse_json_data( $json, $feed_id ) {
 		}
 
 		$html .= '<li class="activity-feed__item">';
-		if ( isset( $value->{'sourceUserImage'} ) ) {
-			$html .= '<aside class="activity-feed__item-img">';
-			$html .= '<img height="48" width="48" alt="'. $value->{'publisherName'} .'" title="'. $value->{'publisherName'} .'" data-echo="'. $value->{'sourceUserImage'} .'"/>';
-			$html .= '</aside>';
-		} else {
-			$html .= '<aside class="activity_feed__item-icon">';
-			$html .= '<i class="kaf-icon '. get_item_icon( $value->type, $value->name ) .'"></i>';
-			$html .= '</aside>';
-		}
 
 		$html .= '<div class="activity-feed__item-inside">';
+		if ( isset( $value->{'sourceUserImage'} ) ) {
+			$html .= '<aside class="activity-feed__item-img">';
+			$html .= '<img alt="'. $value->{'publisherName'} .'" title="'. $value->{'publisherName'} .'" data-echo="'. $value->{'sourceUserImage'} .'"/>';
+			$html .= '</aside>';
+		} else {
+			$html .= '<aside class="activity-feed__item-icon ' . $value->name . '">';
+			$html .= '<img src="' . get_item_logo( $value->type, $value->name ) .'" alt="' . $value->name . '"/>';
+			$html .= '</aside>';
+		}
 		$html .= '<span class="activity-feed__details">';
 
 		switch ( $value->name ) {
@@ -163,6 +164,13 @@ function parse_json_data( $json, $feed_id ) {
 			$html .= '</span>';
 			$html .= '</a>';
 		}
+		$html .= '<a href="'. $value->{'originalUrl'}.'" class="activity-feed__time">';
+		$html .= '<time datetime="'. date_i18n( 'd.m.Y H:m', strtotime( $value->timestamp ) ) .'">';
+		// Add gmt_offset to the $value->timestamp because original timestamp is UTC 0.
+		$time_zone_hours = (int) get_option( 'gmt_offset' );
+		$html .= sprintf( _x( '%s ago', '%s = human-readable time difference', THEME_SLUG ), human_time_diff( strtotime( $value->timestamp . $time_zone_hours . ' hours' ), current_time( 'timestamp' ) ) );
+		$html .= '</time>';
+		$html .= '</a>';
 		$html .= '</span>';
 		$html .= '<span class="activity-feed__content">';
 		$nl2br_text = nl2br( $value->content );
@@ -183,14 +191,6 @@ function parse_json_data( $json, $feed_id ) {
 			}
 			$html .= '</a>';
 		}
-		$html .= '<a href="'. $value->{'originalUrl'}.'" class="activity-feed__time">';
-		$html .= '<i class="kaf-icon kaf-icon-clock"></i>';
-		$html .= '<time datetime="'. date_i18n( 'd.m.Y H:m', strtotime( $value->timestamp ) ) .'">';
-		// Add gmt_offset to the $value->timestamp because original timestamp is UTC 0.
-		$time_zone_hours = (int) get_option( 'gmt_offset' );
-		$html .= sprintf( _x( '%s ago', '%s = human-readable time difference', THEME_SLUG ), human_time_diff( strtotime( $value->timestamp . $time_zone_hours . ' hours' ), current_time( 'timestamp' ) ) );
-		$html .= '</time>';
-		$html .= '</a>';
 		$html .= '</span>';
 		$html .= '</div>'; // Close class="item".
 		$html .= '</li>'; // Close class="item-wrap".
@@ -204,22 +204,18 @@ function parse_json_data( $json, $feed_id ) {
 }
 
 /**
- * Get icon name
+ * Get logo
  *
  * @param string $type social/news/blog
  * @param string $name Facebook/Twitter/"Mixed"
  *
- * @return string (icon css-class)
+ * @return img src
  */
-function get_item_icon( $type, $name ) {
+function get_item_logo( $type, $name ) {
 	if ( 'social' === $type && 'Facebook' === $name ) {
-		return 'kaf-icon-facebook-squared';
+		return Assets\asset_path( 'images/facebook-logo.svg' );
 	} elseif ( 'social' === $type && 'Twitter' === $name ) {
-		return 'kaf-icon-twitter';
-	} elseif ( 'news' === $type ) {
-		return 'kaf-icon-doc';
-	} else {
-		return 'kaf-icon-doc-text';
+		return Assets\asset_path( 'images/twitter-logo.svg' );
 	}
 }
 
@@ -234,10 +230,9 @@ function get_item_icon( $type, $name ) {
  */
 function parse_urls_and_hashtags( $text, $service_url, $hashtag_url ) {
 	// http://php.net/manual/en/function.preg-replace-callback.php#109938
-	$text = preg_replace_callback( '/([\w]+\:\/\/[\w-?&;#~=\.\/\@]+[\w\/])/',
-    	function ( $matches ) {
-			return '<a href="' . $matches[0] . '">' . $matches[0] . '</a>';
-		}, $text );
+	$text = preg_replace_callback( '/([\w]+\:\/\/[\w-?&;#~=\.\/\@]+[\w\/])/', function ( $matches ) {
+		return '<a href="' . $matches[0] . '">' . $matches[0] . '</a>';
+	}, $text );
 	if ( isset( $service_url ) ) {
 		$text = preg_replace_callback( '/@([A-Öa-ö0-9\/]*)/',
 			function ( $matches ) use ( $service_url ) {
