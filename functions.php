@@ -36,8 +36,16 @@ define( 'ACF_ENABLE_TWITTER_BOX', 'enable_twitter_follow_box' );
 define( 'ACF_ENABLE_ACTIVITY_FEED', 'enable_activity_feed' );
 define( 'ACF_ACTIVITY_FEED_ID', 'activity_feed_id' );
 define( 'ACF_ACTIVITY_FEED_LIMIT', 'activity_feed_limit' );
+define( 'ACF_RSS_ENABLE', 'enable_rss_fetch' );
+define( 'ACF_RSS_URLS', 'rss_urls' );
+define( 'ACF_RSS_URL', 'rss_url' );
 define( 'ACF_PAGE_HEADER_IMAGE', 'page_header_image' );
 define( 'ACF_PAGE_HEADER_TEXT', 'page_header_text' );
+define( 'ACF_FOOTER_INFO_HEADER_LEFT' , 'footer_info_left_header' );
+define( 'ACF_FOOTER_INFO_HEADER_RIGHT' , 'footer_info_right_header' );
+define( 'ACF_FOOTER_INFO_LEFT', 'footer_info_left' );
+define( 'ACF_FOOTER_INFO_RIGHT', 'footer_info_right' );
+define( 'ACF_FOOTER_LOGO', 'footer_logo' );
 
 $sage_includes = [
     'lib/assets.php',    // Scripts and stylesheets
@@ -49,6 +57,8 @@ $sage_includes = [
     'lib/wrapper.php',   // Theme wrapper class
     'lib/customizer.php', // Theme customizer
     'lib/rss-post-type.php', // RSS custom post type
+    'lib/save-image-from-remote-to-post.php',
+    'lib/rss-posts-handler.php',
 ];
 
 foreach ( $sage_includes as $file ) {
