@@ -26,9 +26,7 @@ $query = new WP_Query(
 );
 ?>
 <?php if ( $query->have_posts() ) : ?>
-    <div class="newsfeed-logo">
-       <h1><?php _e( 'Latest posts', THEME_SLUG ); ?></h1>
-   </div>
+    <h1 class="home__main-header"><?php _e( 'Latest posts', THEME_SLUG ); ?></h1>
 	<?php while ( $query->have_posts() ) : $query->the_post(); ?>
         <article <?php post_class();?>>
             <a href="<?php echo get_permalink(); ?>" title="<?php the_title() ?>">
