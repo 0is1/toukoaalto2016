@@ -1,5 +1,6 @@
 .scrolling{
     .main-header{
+        margin-bottom: 100px;
         &__container{
             background-color: $white;
             height: 5rem;
@@ -14,8 +15,16 @@
             .brand{
                 color: $brand-primary;
                 font-size: 3rem;
+                margin: 0 auto;
+                max-width: 1180px;
+                padding: 1rem 0;
+                text-align: left;
+                text-shadow: none;
+                width: 90vw;
+                word-spacing: normal;
                 @include media-breakpoint-up(md){
                     font-size: 2rem;
+                    padding: .5rem 0 0;
                 }
             }
         }
@@ -31,14 +40,31 @@
     }
 }
 .main-header{
+    margin-bottom: 2rem;
     min-height: 100px;
     &__container{
         position: relative;
-        transition: all $default-transition;
+        transition: $default-transition;
         z-index: $z-index-default;
         .brand{
             color: $brand-primary;
+            display: block;
             font-size: 4rem;
+            font-weight: 900;
+            line-height: 1;
+            text-align: center;
+            text-shadow: $basic-shadow;
+            transition: $default-transition;
+            padding: 3rem 0 0;
+            word-spacing: 100vw;
+            @include media-breakpoint-up(sm){
+                word-spacing: normal;
+            };
+            @include media-breakpoint-up(md){
+                font-size: 6rem;
+                line-height: inherit;
+                padding: .5rem 0 0;
+            };
         }
     }
 }

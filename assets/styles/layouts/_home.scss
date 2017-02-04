@@ -1,5 +1,6 @@
 .scrolling {
     .home__hero {
+        display: none;
         opacity: 0;
     }
 }
@@ -7,7 +8,7 @@
 .home {
     &__wrapper {
         margin-top: $home-margin-top;
-        transition: all $default-transition;
+        transition: $default-transition;
         > * {
             &:not(:first-of-type) {
                 margin-top: 4rem;
@@ -16,7 +17,12 @@
             }
         }
     }
-
+    &__main-header{
+        border-bottom: 2px solid $brand-secondary;
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 2rem;
+    }
     &__hero {
         @include full-screen-container($hero-heigth, 100vw);
         transition: opacity 0.5s;
@@ -32,20 +38,88 @@
             filter: invert(10%);
             height: $hero-heigth;
             position: absolute;
-            transition: all $default-transition;
+            transition: $default-transition;
             width: 100vw;
         }
 
         h3 {
             color: $white;
+            font-size: 2rem;
             margin-top: 30vh;
             position: relative;
             text-align: center;
+            text-shadow: $basic-shadow;
             z-index: $z-index-default;
+            @include media-breakpoint-up(md){
+                font-size: 3rem;
+            }
         }
     }
 
     #twitteraccountbox {
         margin: 0 auto;
+    }
+    .activity-feed{
+        &__data{
+            list-style: none;
+            margin: 0 auto;
+            max-width: 800px;
+            padding: 0;
+        }
+        &__item{
+            border-bottom: 2px solid $brand-primary;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+        }
+        &__item-icon{
+            border-radius: 100%;
+            display: flex;
+            height: 60px;
+            justify-content: center;
+            position: relative;
+            width: 60px;
+            &.Facebook{
+                background: $facebook-color;
+            }
+            &.Twitter{
+                background: $twitter-color;
+            }
+            img{
+                width: 25%;
+            }
+        }
+        &__item-inside{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        &__details{
+            align-self: center;
+            margin-left: 1rem;
+            > * {
+                display: flex;
+                margin-right: .5rem;
+            }
+        }
+        &__item-img{
+            img{
+                border: 2px solid $brand-primary;
+                border-radius: 100%;
+                height: 60px;
+                width: 60px;
+            }
+        }
+        &__content{
+            margin-top: 1rem;
+            img{
+                margin-top: 1rem;
+                transition: $default-transition;
+                &:hover{
+                    box-shadow: $basic-shadow;
+                    transform: scale(1.01);
+                }
+            }
+        }
     }
 }

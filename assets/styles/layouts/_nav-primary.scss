@@ -1,5 +1,36 @@
+.scrolling{
+    &.home{
+        .nav-primary{
+            &__mobile-toggle{
+                &:after{
+                    color: $brand-primary;
+                    text-shadow: none;
+                }
+                span{
+                    background-color: $brand-primary;
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+}
+.home{
+    .nav-primary{
+        &__mobile-toggle{
+            span{
+                background-color: $white;
+            }
+            &::after{
+                color: $white;
+            }
+        }
+    }
+}
 .nav-primary{
     background-color: $white;
+    margin: 0 auto;
+    max-width: 1180px;
+    width: 90vw;
     &__mobile{
         display: block;
         @include media-breakpoint-up(md){
@@ -7,16 +38,16 @@
         }
     }
     &__mobile-menu{
-        background-color: $white;
-        bottom: 0;
+        // background-color: $white;
+        // bottom: 0;
         display: none;
-        height: 100vh;
-        left: 0;
-        padding: 2rem;
-        position: absolute;
-        top: 0;
-        width: 100vw;
-        z-index: 9;
+        // height: 100vh;
+        // left: 0;
+        // padding: 2rem;
+        // position: absolute;
+        // top: 0;
+        // width: 100vw;
+        // z-index: 9;
         ul.nav{
             display: flex;
             flex-direction: column;
@@ -37,7 +68,24 @@
         }
     }
     .open{
+        &.nav-primary__mobile{
+            background-color: $white;
+            bottom: 0;
+            height: 100vh;
+            left: 0;
+            padding: 2rem;
+            position: absolute;
+            top: 0;
+            width: 100vw;
+            z-index: 9;
+        }
         .nav-primary__mobile-toggle {
+            &:after{
+                color: $brand-secondary;
+            }
+            span{
+                background: $brand-secondary;
+            }
             span{
                 &:nth-child(1) {
                   top: 18px;
@@ -57,6 +105,27 @@
                 }
             }
         }
+        .nav-primary__search{
+            bottom: 0;
+            display: block;
+            left: 0;
+            position: fixed;
+            width: 100%;
+            z-index: 9;
+            .search-form{
+                margin: 0 2rem 1rem;
+                text-align: left;
+            }
+            input, label{
+                width: 100%;
+            }
+            .search-field{
+                padding: 1rem;
+            }
+            .search-submit{
+                display: block;
+            }
+        }
         .nav-primary__mobile-menu{
             display: block;
         }
@@ -70,26 +139,38 @@
         right: 0;
         top: 0;
         transform: rotate(0deg);
-        transition: .5s ease-in-out;
+        transition: $default-transition;
         z-index: 10;
+        &:hover{
+            &:after{
+                color: $brand-primary;
+            }
+            span{
+                background: $brand-primary;
+            }
+        }
         &:after{
             bottom: -1rem;
+            color: $brand-primary;
             content: 'Menu';
-            font-weight: 800;
             position: absolute;
             text-align: center;
+            text-shadow: $basic-shadow;
+            text-transform: uppercase;
+            transition: $default-transition;
         }
         span{
-            display: block;
-            position: absolute;
-            height: .25rem;
-            width: 95%;
             background: $brand-primary;
             border-radius: .5rem;
+            box-shadow: $basic-shadow;
+            display: block;
+            height: .25rem;
             opacity: 1;
             left: 0;
+            position: absolute;
             transform: rotate(0deg);
-            transition: .25s ease-in-out;
+            transition: $default-transition;
+            width: 95%;
         }
         span:nth-child(1) {
             top: 0;
@@ -106,7 +187,33 @@
     &__desktop{
         display: none;
         @include media-breakpoint-up(md){
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    &__desktop-menu{
+        align-items: center;
+        display: flex;
+    }
+    &__search{
+        display: none;
+        @include media-breakpoint-up(md){
             display: block;
+            max-width: 20%;
+        };
+        .search-form{
+            margin: .5rem;
+            text-align: right;
+        }
+        .search-field{
+            transition: $default-transition;
+            width: 50%;
+            &:focus{
+                width: 100%;
+            }
+        }
+        .search-submit{
+            display: none;
         }
     }
     .dropdown{

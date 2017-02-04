@@ -9,11 +9,10 @@ $grid-breakpoints: (
     md: 768px,
     lg: 992px,
     xl: 1280px,
-    xxl: 1920px,
 );
 
-$hero-heigth: 65vh;
-$home-margin-top: 55vh;
+$hero-heigth: 70vh;
+$home-margin-top: 50vh;
 $z-index-hero: 0;
 $z-index-default: 1;
 
@@ -21,21 +20,23 @@ $z-index-default: 1;
 $brand-primary: #27ae60;
 $brand-secondary: #e46363;
 $white: #f7f7f7;
-
+$black: #030303;
 $enable-transitions: true;
 $enable-print-styles: true;
-
+$facebook-color: #3b5998;
+$twitter-color: #1da1f2;
 $border-radius: 2px;
 $nav-pills-active-link-color: $white;
 $nav-pills-active-link-bg: $brand-secondary;
+$basic-shadow: 2px 2px 2px rgba($black, .25);
 
 // Animations
-$default-transition: .5s ease-in-out;
+$default-transition: all .5s ease-in-out;
 
 // Typography
-$font-primary: 'Open Sans', 'Arial', 'sans-serif';
+$font-primary: 'Alegreya Sans', 'Open Sans', 'Arial', 'sans-serif';
 
-$base-font-size: 12px;
+$base-font-size: 13px;
 $base-font-size-sm: 14px;
 $base-font-size-md: 16px;
 $base-font-size-lg: 18px;
