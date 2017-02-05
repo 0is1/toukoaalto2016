@@ -19,6 +19,7 @@ var runSequence = require('run-sequence');
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var uglify = require('gulp-uglify');
+const zip = require('gulp-zip');
 
 // See https://github.com/austinpray/asset-builder
 var manifest = require('asset-builder')('./assets/manifest.json');
@@ -240,6 +241,13 @@ gulp.task('wiredep', function() {
     return gulp.src(project.css).pipe(wiredep()).pipe(changed(path.source + 'styles', {hasChanged: changed.compareSha1Digest})).pipe(gulp.dest(path.source + 'styles'));
 });
 
+gulp.task('zip', function(){
+    gulp.src(['*.php', 'style.css', 'screenshot.png', 'acf-json/*', 'dist/**/*', 'lang/*', 'lib/*', 'templates/*'],{
+            base: './'
+        })
+        .pipe(zip('toukoaalto2017.zip'))
+        .pipe(gulp.dest('.'));
+});
 // ### Gulp
 // `gulp` - Run a complete build. To compile for production run `gulp --production`.
 gulp.task('default', ['clean'], function() {
