@@ -22,6 +22,10 @@
                 echo.init({offset: 1500, throttle: 250, unload: false});
 
                 // MENUS
+                $('a[data-action="toggle-desktop-menu"]').click(function(e){
+                    e.preventDefault();
+                    $(this).parent('.js-nav-primary').toggleClass('show');
+                });
                 $('a[data-action="toggle-main-menu"]').click(function(e){
                     e.preventDefault();
                     $('body, html').toggleClass('no-scroll');

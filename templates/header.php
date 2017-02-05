@@ -6,7 +6,8 @@ use Roots\Sage\Setup;
     <div class="main-header__container js-header-container">
         <div class="container-fluid">
             <a class="brand" title="<?php echo get_site_url(); ?>" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
-            <nav class="nav-primary">
+            <nav class="nav-primary js-nav-primary">
+                <a class="nav-primary__toggle-desktop-icon" title="Avaa valikko" data-action="toggle-desktop-menu" href="#"><?php _e( 'Avaa valikko', THEME_SLUG ); ?></a>
                 <div class="nav-primary__desktop">
                     <?php
                     if ( has_nav_menu( 'primary_navigation' ) ) :

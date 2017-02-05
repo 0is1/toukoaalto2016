@@ -9,6 +9,21 @@ html[data-useragent*='MSIE 9']{
 .scrolling{
     &.home{
         .nav-primary{
+            margin-bottom: 0;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 0;
+            width: 90vw;
+            &__toggle-desktop-icon{
+                display: none;
+            }
+            &__desktop{
+                justify-content: space-between;
+            }
+            &__desktop-menu{
+                align-items: center;
+                display: flex;
+            }
             &__mobile-toggle{
                 &:after{
                     color: $brand-primary;
@@ -24,6 +39,27 @@ html[data-useragent*='MSIE 9']{
 }
 .home{
     .nav-primary{
+        margin: 0 0 0 85vw;
+        width: 15vw;
+        &.show{
+            margin: 0 auto;
+            width: 90vw;
+        }
+        &__desktop{
+            justify-content:flex-start;
+        }
+        &__desktop-menu{
+            display: none;
+        }
+        &__toggle-desktop-icon{
+            background: url('../images/left-arrow.svg') left center no-repeat;
+            display: none;
+            font-size: .666rem;
+            padding-left: 25px;
+            @include media-breakpoint-up(md){
+                display: inline-block;
+            }
+        }
         &__mobile-toggle{
             span{
                 background-color: $white;
@@ -32,14 +68,61 @@ html[data-useragent*='MSIE 9']{
                 color: $white;
             }
         }
+        &__search{
+            @include media-breakpoint-up(md){
+                max-width: 100%;
+            };
+            .search-field{
+                width: 100%;
+            }
+        }
+    }
+}
+.show{
+    .nav-primary{
+        &__desktop-menu{
+            align-items: center;
+            display: flex;
+        }
+        &__toggle-desktop-icon{
+            display: none;
+        }
+        &__desktop{
+            justify-content: space-between;
+        }
+        &__search{
+            @include media-breakpoint-up(md){
+                max-width: 20%;
+            };
+            .search-field{
+                width: 50%;
+                &:focus{
+                    width: 100%;
+                }
+            }
+        }
     }
 }
 .nav-primary{
     background-color: $white;
     margin: 0 auto;
     max-width: 1180px;
-    width: 90%;
+    transition: $default-transition;
     width: 90vw;
+    &__toggle-desktop-icon{
+        display: none;
+    }
+    &__desktop{
+        display: none;
+        justify-content: space-between;
+        @include media-breakpoint-up(md){
+            display: flex;
+        }
+    }
+    &__desktop-menu{
+        align-items: center;
+        display: flex;
+    }
     &__mobile{
         display: block;
         @include media-breakpoint-up(md){
@@ -181,33 +264,23 @@ html[data-useragent*='MSIE 9']{
           top: 1.5rem;
         }
     }
-    &__desktop{
-        display: none;
-        @include media-breakpoint-up(md){
-            display: flex;
-            justify-content: space-between;
-        }
-    }
-    &__desktop-menu{
-        align-items: center;
-        display: flex;
-    }
+
     &__search{
         display: none;
         @include media-breakpoint-up(md){
             display: block;
             max-width: 20%;
         };
-        .search-form{
-            margin: .5rem;
-            text-align: right;
-        }
         .search-field{
             transition: $default-transition;
             width: 50%;
             &:focus{
                 width: 100%;
             }
+        }
+        .search-form{
+            margin: .5rem;
+            text-align: right;
         }
         .search-submit{
             display: none;
