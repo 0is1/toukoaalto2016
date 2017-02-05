@@ -54,7 +54,7 @@
             line-height: 1;
             text-align: center;
             text-shadow: $basic-shadow;
-            transition: $default-transition;
+            transition: color .5s ease-in-out, font-size .5s ease-in-out;
             padding: 3rem 0 0;
             word-spacing: 100vw;
             @include media-breakpoint-up(sm){

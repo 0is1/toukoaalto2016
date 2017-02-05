@@ -18,6 +18,12 @@
     width: $width;
     height: $height;
 }
+
+@mixin media-breakpoint-up-with-max-height( $width, $height ){
+  @media (min-width: #{map-get( $grid-breakpoints, $width )}) and (max-height: $height) {
+    @content
+  }
+}
 /*
     https://github.com/bfred-it/object-fit-images/blob/master/preprocessors/mixin.scss
     This mixin can be used to set the object-fit:

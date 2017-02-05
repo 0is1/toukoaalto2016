@@ -9,6 +9,9 @@
     &__wrapper {
         margin-top: $home-margin-top;
         transition: $default-transition;
+        @include media-breakpoint-up-with-max-height(md, 650px){
+            margin-top: $home-margin-top-squat;
+        };
         > * {
             &:not(:first-of-type) {
                 margin-top: 4rem;
@@ -24,7 +27,7 @@
         margin-bottom: 2rem;
     }
     &__hero {
-        @include full-screen-container($hero-heigth, 100vw);
+        @include full-screen-container($hero-height, 100vw);
         transition: opacity 0.5s;
         z-index: $z-index-hero;
         &:hover {
@@ -36,20 +39,26 @@
         img {
             @include object-fit(cover);
             filter: invert(10%);
-            height: $hero-heigth;
+            height: $hero-height;
             position: absolute;
             transition: $default-transition;
             width: 100vw;
+            @include media-breakpoint-up-with-max-height(md, 650px){
+                height: $hero-height-squat;
+            };
         }
 
         h3 {
             color: $white;
             font-size: 2rem;
-            margin-top: 30vh;
+            margin-top: 35vh;
             position: relative;
             text-align: center;
             text-shadow: $basic-shadow;
             z-index: $z-index-default;
+            @include media-breakpoint-up-with-max-height(md, 650px){
+                margin-top: 50vh;
+            };
             @include media-breakpoint-up(md){
                 font-size: 3rem;
             }
@@ -112,6 +121,7 @@
         }
         &__content{
             margin-top: 1rem;
+            width: 100%;
             img{
                 margin-top: 1rem;
                 transition: $default-transition;
@@ -120,6 +130,11 @@
                     transform: scale(1.01);
                 }
             }
+        }
+        &__content-text{
+        }
+        &__content-image{
+            display: block;
         }
     }
 }

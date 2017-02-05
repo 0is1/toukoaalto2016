@@ -11,8 +11,11 @@ $grid-breakpoints: (
     xl: 1280px,
 );
 
-$hero-heigth: 70vh;
-$home-margin-top: 50vh;
+$hero-height: 75vh;
+$hero-height-squat: 100vh;
+$home-margin-top: 55vh;
+$home-margin-top-squat: 75vh;
+
 $z-index-hero: 0;
 $z-index-default: 1;
 
@@ -28,7 +31,7 @@ $twitter-color: #1da1f2;
 $border-radius: 2px;
 $nav-pills-active-link-color: $white;
 $nav-pills-active-link-bg: $brand-secondary;
-$basic-shadow: 2px 2px 2px rgba($black, .25);
+$basic-shadow: 2px 2px 2px rgba($black, .35);
 
 // Animations
 $default-transition: all .5s ease-in-out;

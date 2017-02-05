@@ -25,3 +25,13 @@ img{
     flex-direction: row;
     justify-content: space-between;
 }
+.home{
+    .browsehappy{
+        left: 0;
+        position: fixed;
+        right: 0;
+        text-align: center;
+        top: 0;
+        z-index: 99;
+    }
+}
