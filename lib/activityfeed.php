@@ -175,19 +175,19 @@ function parse_json_data( $json, $feed_id ) {
 		$html .= '<span class="activity-feed__content">';
 		$nl2br_text = nl2br( $value->content );
 		if ( 'Facebook' === $value->name || 'Twitter' === $value->name || 'Instagram' === $value->name ) {
-			$html .= '<p>' . parse_urls_and_hashtags( $nl2br_text,  $item_service_url, $item_service_hashtag_url );
+			$html .= '<p class="activity-feed__content-text">' . parse_urls_and_hashtags( $nl2br_text,  $item_service_url, $item_service_hashtag_url );
 			if ( isset( $value->{'imageUrl'} ) ) {
 				$img_url = ( 'Twitter' == $value->name ) ? $value->{'imageUrl'} . ':small' : $value->{'imageUrl'};
 				$html .= '<a href="'. $value->{'originalUrl'}.'">';
-				$html .= '<img alt="'. $value->{'publisherName'} .'" data-echo="'. $img_url .'" src="https://placehold.it/300x300"/>';
+				$html .= '<img class="activity-feed__content-image" alt="'. $value->{'publisherName'} .'" data-echo="'. $img_url .'" src="https://placehold.it/300x300"/>';
 				$html .= '</a>';
 			}
 			$html .= '</p>';
 		} else {
 			$html .= '<a href="'. $value->{'originalUrl'}.'">';
-			$html .= '<p>' . $nl2br_text . '</p>';
+			$html .= '<p class="activity-feed__content-text">' . $nl2br_text . '</p>';
 			if ( isset( $value->{'imageUrl'} ) ) {
-				$html .= '<img alt="'. $value->{'publisherName'} .'" data-echo="'. $value->{'imageUrl'} .'" src="https://placehold.it/300x300"/>';
+				$html .= '<img class="activity-feed__content-image" alt="'. $value->{'publisherName'} .'" data-echo="'. $value->{'imageUrl'} .'" src="https://placehold.it/300x300"/>';
 			}
 			$html .= '</a>';
 		}
