@@ -56,10 +56,13 @@
 
                     setTimeout(function() {
                         waiting = false;
-                    }, 50);
+                    }, 25);
                 });
 
                 objectFitImages('img.js-object-fit');
+
+                var doc = document.documentElement;
+                doc.setAttribute('data-useragent', navigator.userAgent);
             },
             finalize: function() {
                 // JavaScript to be fired on all pages, after page specific JS is fired
