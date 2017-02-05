@@ -10,7 +10,7 @@ use Roots\Sage\Wrapper;
 	<?php get_template_part( 'templates/head' ); ?>
   <body <?php body_class(); ?>>
     <!--[if IE]>
-      <div class="alert alert-warning">
+      <div class="alert alert-warning browsehappy">
         <?php _e( 'You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.', THEME_SLUG ); ?>
       </div>
     <![endif]-->
