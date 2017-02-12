@@ -1,14 +1,14 @@
 <?php
 use Roots\Sage\Setup;
-
 ?>
 <header class="main-header">
     <div class="main-header__container js-header-container">
-        <div class="container-fluid">
+        <div class="container-fluid main-header__fluid">
             <a class="brand" title="<?php echo get_site_url(); ?>" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
             <nav class="nav-primary js-nav-primary">
                 <a class="nav-primary__toggle-desktop-icon" title="Avaa valikko" data-action="toggle-desktop-menu" href="#"><?php _e( 'Avaa valikko', THEME_SLUG ); ?></a>
                 <div class="nav-primary__desktop">
+                    <?php get_template_part( 'templates/links' ); ?>
                     <?php
                     if ( has_nav_menu( 'primary_navigation' ) ) :
                         wp_nav_menu( [
@@ -24,6 +24,7 @@ use Roots\Sage\Setup;
                     </span>
                 </div>
                 <div class="nav-primary__mobile js-menu-container">
+                    <?php get_template_part( 'templates/links' ); ?>
                     <a class="nav-primary__mobile-toggle" href="#" data-action="toggle-main-menu">
                         <span></span>
                         <span></span>
