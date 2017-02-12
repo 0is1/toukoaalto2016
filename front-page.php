@@ -33,14 +33,26 @@
             </div>
         <?php endif; ?>
     </div>
+
+    <?php if ( get_field( ACF_FACEBOOK_ID, ACF_OPTION_KEY ) && get_field( ACF_ENABLE_FACEBOOK_PAGE_BOX, ACF_OPTION_KEY ) ) : ?>
+        <?php $facebook_id = get_field( ACF_FACEBOOK_ID, ACF_OPTION_KEY ); ?>
+        <div class="home__facebook-page">
+            <h3 class="home__facebook-page-title">Facebook</h3>
+            <div class="fb-page" data-width="500" data-href="https://www.facebook.com/<?php echo $facebook_id;?>/" data-tabs="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                <blockquote cite="https://www.facebook.com/touko.aalto/" class="fb-xfbml-parse-ignore">
+                    <a href="https://www.facebook.com/<?php echo $facebook_id;?>/"><?php echo get_bloginfo( 'name' ); ?></a>
+                </blockquote>
+            </div>
+        </div>
+    <?php endif; ?>
     <?php if ( get_field( ACF_ENABLE_TWITTER_BOX, ACF_OPTION_KEY ) ) : ?>
-        <div><?php echo do_shortcode( '[twitter_account_box]' ); ?></div>
+        <div class="home__twitter-account-box"><?php echo do_shortcode( '[twitter_account_box]' ); ?></div>
     <?php endif; ?>
     <?php if ( get_field( ACF_ENABLE_WP_POSTS, ACF_OPTION_KEY ) ) : ?>
-        <div><?php get_template_part( 'templates/homepage-posts' ); ?></div>
+        <div class="home__homepage-posts"><?php get_template_part( 'templates/homepage-posts' ); ?></div>
     <?php endif; ?>
     <?php if ( get_field( ACF_ENABLE_ACTIVITY_FEED, ACF_OPTION_KEY ) ) : ?>
-        <div><?php get_template_part( 'templates/homepage-activityfeed' ); ?></div>
+        <div class="home__activityfeed"><?php get_template_part( 'templates/homepage-activityfeed' ); ?></div>
     <?php endif;
 
     ?>
