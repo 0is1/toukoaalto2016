@@ -35,3 +35,11 @@ img{
         z-index: 99;
     }
 }
+.excerpt-more{
+    font-size: .777rem;
+    display: block;
+    margin-top: .5rem;
+    @include media-breakpoint-up(md){
+        max-width: 250px;
+    };
+}

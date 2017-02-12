@@ -14,6 +14,7 @@ $grid-breakpoints: (
 $hero-height: 75vh;
 $hero-height-squat: 100vh;
 $home-margin-top: 55vh;
+$home-margin-top-mobile: 65vh;
 $home-margin-top-squat: 75vh;
 
 $z-index-hero: 0;
@@ -28,6 +29,8 @@ $enable-transitions: true;
 $enable-print-styles: true;
 $facebook-color: #3b5998;
 $twitter-color: #1da1f2;
+$instagram-color: #ffffff;
+$rss-color: #f26522;
 $border-radius: 2px;
 $nav-pills-active-link-color: $white;
 $nav-pills-active-link-bg: $brand-secondary;
@@ -37,7 +40,7 @@ $basic-shadow: 2px 2px 2px rgba($black, .35);
 $default-transition: all .5s ease-in-out;
 
 // Typography
-$font-primary: 'Fira Sans', 'Open Sans', 'Arial', 'sans-serif';
+$font-primary: 'Exo', 'Open Sans', 'Arial', 'sans-serif';
 
 $base-font-size: 13px;
 $base-font-size-sm: 14px;

@@ -118,6 +118,7 @@ html[data-useragent*='MSIE 9']{
     &__desktop{
         display: none;
         justify-content: space-between;
+        position: relative;
         @include media-breakpoint-up(md){
             display: flex;
         }
@@ -163,7 +164,7 @@ html[data-useragent*='MSIE 9']{
             height: 100vh;
             left: 0;
             overflow: auto;
-            padding: 2rem;
+            padding: 2rem 2rem 15vw;
             position: absolute;
             top: 0;
             width: 100vw;

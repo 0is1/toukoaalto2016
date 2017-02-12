@@ -28,6 +28,11 @@
                 }
             }
         }
+        &__links-nav{
+            @include media-breakpoint-up(md){
+                display: flex;
+            };
+        }
     }
     &.home{
         .main-header{
@@ -36,6 +41,13 @@
                     color: $brand-primary;
                 }
             }
+        }
+    }
+}
+.open{
+    .main-header{
+        &__links-nav{
+            display: flex;
         }
     }
 }
@@ -65,6 +77,90 @@
                 line-height: inherit;
                 padding: .5rem 0 0;
             };
+        }
+    }
+    &__links-nav{
+        bottom: 0;
+        display: none;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        left: 0;
+        list-style: none;
+        margin: 0;
+        position: fixed;
+        width: 100vw;
+        z-index: 99;
+        @include media-breakpoint-up(md){
+            left: inherit;
+            margin: .5rem .5rem 0 0;
+            position: absolute;
+            right: 0;
+            top: -35px;
+            width: auto;
+        };
+    }
+    &__links-item{
+        margin: 0;
+        padding: 0;
+        a{
+            display: inline-block;
+            height: 10vw;
+            position: relative;
+            text-align: center;
+            transition: $default-transition;
+            width: 10vw;
+            img{
+                max-width: 50%;
+                left: 50%;
+                position: absolute;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+            @include media-breakpoint-up(md){
+                display: inline-block;
+                height: 25px;
+                width: 25px;
+                img{
+                    left: inherit;
+                    position: relative;
+                    top: inherit;
+                    transform: translate(0);
+                }
+            };
+        }
+    }
+    &__links-fb{
+        background: $facebook-color;
+        img{
+            max-width: 30% !important;
+        }
+        &:hover{
+            background: darken($facebook-color, 10);
+        }
+    }
+    &__links-twitter{
+        background: $twitter-color;
+        &:hover{
+            background: darken($twitter-color, 10);
+        }
+    }
+    &__links-instagram{
+        background: $instagram-color;
+        &:hover{
+            background: darken($instagram-color, 10);
+        }
+    }
+    &__links-blog{
+        background: $white;
+        &:hover{
+            background: darken($white, 10);
+        }
+    }
+    &__links-donate{
+        background: $brand-primary;
+        &:hover{
+            background: darken($brand-primary, 10);
         }
     }
 }

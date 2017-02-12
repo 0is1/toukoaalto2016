@@ -7,10 +7,13 @@
 
 .home {
     &__wrapper {
-        margin-top: $home-margin-top;
+        margin-top: $home-margin-top-mobile;
         transition: $default-transition;
         @include media-breakpoint-up-with-max-height(md, 650px){
             margin-top: $home-margin-top-squat;
+        };
+        @include media-breakpoint-up(md){
+            margin-top: $home-margin-top;
         };
         > * {
             &:not(:first-of-type) {
@@ -32,13 +35,13 @@
         z-index: $z-index-hero;
         &:hover {
             img{
-                filter: invert(20%) blur(2px);
+                filter: blur(2px) sepia(75%);
                 transform: scale(1.01);
             }
         }
         img {
             @include object-fit(cover);
-            filter: invert(10%);
+            filter: blur(0) sepia(50%);
             height: $hero-height;
             position: absolute;
             transition: $default-transition;
@@ -67,6 +70,27 @@
 
     #twitteraccountbox {
         margin: 0 auto;
+    }
+    &__homepage-posts{
+        > article {
+            border: 1px solid $brand-primary;
+            border-radius: $border-radius;
+            margin-bottom: 1rem;
+            padding: 1rem;
+        }
+    }
+    &__facebook-page{
+        .fb-page{
+            display: block;
+            text-align: center;
+            width: 100%;
+        }
+    }
+    &__facebook-page-title{
+        border-bottom: 2px solid $brand-secondary;
+        margin: 0 auto 1rem;
+        max-width: 100%;
+        width: 500px;
     }
     .activity-feed{
         &__data{

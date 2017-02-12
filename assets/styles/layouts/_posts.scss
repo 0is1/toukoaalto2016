@@ -4,5 +4,22 @@
             margin: 1rem 0;
         }
     }
+    .share-buttons-block {
+        .btn {
+            img{
+                margin: 0 5px 0 0;
+            }
+        }
+    }
+}
 
+.search, .archive, .blog {
+    .main{
+        > article {
+            border: 1px solid $brand-primary;
+            border-radius: $border-radius;
+            margin-bottom: 1rem;
+            padding: 1rem;
+        }
+    }
 }
