@@ -19,6 +19,9 @@ html[data-useragent*='MSIE 9']{
             }
             &__desktop{
                 justify-content: space-between;
+                > * {
+                    margin: 0 0 .5rem;
+                }
             }
             &__desktop-menu{
                 align-items: center;
@@ -39,7 +42,7 @@ html[data-useragent*='MSIE 9']{
 }
 .home{
     .nav-primary{
-        margin: 0 0 0 85vw;
+        margin: 0 0 0 83vw;
         width: 15vw;
         &.show{
             margin: 0 auto;
@@ -118,6 +121,9 @@ html[data-useragent*='MSIE 9']{
         @include media-breakpoint-up(md){
             display: flex;
         }
+        >*{
+            margin: .5rem;
+        }
     }
     &__desktop-menu{
         align-items: center;
@@ -166,9 +172,11 @@ html[data-useragent*='MSIE 9']{
         .nav-primary__mobile-toggle {
             &:after{
                 color: $brand-secondary;
+                text-shadow: none;
             }
             span{
                 background: $brand-secondary;
+                box-shadow: none;
             }
             span{
                 &:nth-child(1) {
@@ -279,7 +287,6 @@ html[data-useragent*='MSIE 9']{
             }
         }
         .search-form{
-            margin: .5rem;
             text-align: right;
         }
         .search-submit{
