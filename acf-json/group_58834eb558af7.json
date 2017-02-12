@@ -126,6 +126,46 @@
             "ui": 0,
             "ui_on_text": "",
             "ui_off_text": "",
+            "key": "field_58a0529305efc",
+            "label": "N\u00e4yt\u00e4 Facebook sivun-laatikko etusivulla",
+            "name": "enable_facebook_page_box",
+            "type": "true_false",
+            "instructions": "M\u00e4\u00e4ritt\u00e4\u00e4, n\u00e4ytet\u00e4\u00e4nk\u00f6 Facebook-sivun laatikko etusivulla (vaatii, ett\u00e4 Facebook App Id on asetettu alla ja Facebook k\u00e4ytt\u00e4j\u00e4tunnus on asetettu sosiaalisen median asetuksissa)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": "",
+            "min": "",
+            "max": "",
+            "step": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "key": "field_58a052da05efd",
+            "label": "Facebook App Id",
+            "name": "facebook_app_id",
+            "type": "number",
+            "instructions": "Facebook App Id (https:\/\/developers.facebook.com)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": 0,
+            "message": "",
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
             "key": "field_58834faadae10",
             "label": "N\u00e4yt\u00e4 viimeisimm\u00e4t sosiaalisen median sis\u00e4ll\u00f6t etusivulla",
             "name": "enable_activity_feed",
@@ -495,5 +535,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1486221141
+    "modified": 1486902035
 }
