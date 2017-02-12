@@ -25,10 +25,33 @@ function body_class( $classes ) {
 add_filter( 'body_class', __NAMESPACE__ . '\\body_class' );
 
 /**
+ * Remove tag classes from body and post
+ * Needed until Bootstrap 4 alpha 6
+ *
+ * @since 1.0.0
+ *
+ * @param array $classes Classes to print.
+ */
+function _twbs_bootstrap_20542( $classes ) {
+	return array_diff( $classes, array(
+		'tag',
+		'tag-pill',
+		'tag-default',
+		'tag-info',
+		'tag-warning',
+		'tag-danger',
+		'tag-success',
+		'tag-primary',
+	) );
+}
+add_filter( 'body_class', __NAMESPACE__ . '\\_twbs_bootstrap_20542', 10, 1 );
+add_filter( 'post_class', __NAMESPACE__ . '\\_twbs_bootstrap_20542', 10, 1 );
+
+/**
  * Clean up the_excerpt()
  */
 function excerpt_more() {
-	return ' &hellip; <a href="' . get_permalink() . '">' . __( 'Continued', THEME_SLUG ) . '</a>';
+	return ' &hellip; <a class="excerpt-more btn btn-success" href="' . get_permalink() . '">' . __( 'Continued', THEME_SLUG ) . '</a>';
 }
 add_filter( 'excerpt_more', __NAMESPACE__ . '\\excerpt_more' );
 
