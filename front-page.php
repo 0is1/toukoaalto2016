@@ -33,6 +33,33 @@
             </div>
         <?php endif; ?>
     </div>
+    <?php
+    // check if the repeater field has rows of data
+    if ( have_rows( ACF_PINNED_POSTS, ACF_OPTION_KEY ) ) : ?>
+        <div class="home__pinned-posts">
+        <?php
+        // loop through the rows of data
+        while ( have_rows( ACF_PINNED_POSTS, ACF_OPTION_KEY ) ) : the_row();
+            $pinned_posts = get_sub_field( ACF_PINNED_POST );
+            foreach ( $pinned_posts as $post ) : ?>
+                <article class="home__pinned-post">
+                    <a title="<?php echo $post->post_title; ?>" href="<?php echo get_the_permalink( $post->ID ); ?>">
+                        <?php the_post_thumbnail( $post->ID ); ?>
+                    </a>
+                    <span class="text">
+                        <h3>
+                            <a title="<?php echo $post->post_title; ?>" href="<?php echo get_the_permalink( $post->ID ); ?>"><?php echo $post->post_title; ?></a>
+                        </h3>
+                    </span>
+                </article>
+            <?php
+            endforeach;
+            ?>
+        <?php endwhile; ?>
+        </div>
+    <?php
+    endif; // have_rows( ACF_PINNED_POSTS, ACF_OPTION_KEY )
+    ?>
 
     <?php if ( get_field( ACF_FACEBOOK_ID, ACF_OPTION_KEY ) && get_field( ACF_ENABLE_FACEBOOK_PAGE_BOX, ACF_OPTION_KEY ) ) : ?>
         <?php $facebook_id = get_field( ACF_FACEBOOK_ID, ACF_OPTION_KEY ); ?>
