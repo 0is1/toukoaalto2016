@@ -31,7 +31,7 @@
         <?php endif; ?>
         <?php if ( get_field( ACF_DONATE_URL, ACF_OPTION_KEY ) ) : ?>
             <li class="main-header__links-item">
-                <a target="_blank" title="Lahjoitus" class="main-header__links-donate" href="<?php echo get_field( ACF_DONATE_URL, ACF_OPTION_KEY );?>">
+                <a target="_blank" title="<?php _e( 'Lahjoita kampanjaan', THEME_SLUG ); ?>" class="main-header__links-donate" href="<?php echo get_field( ACF_DONATE_URL, ACF_OPTION_KEY );?>">
                     <img src="<?php echo Assets\asset_path( 'images/donate-logo.svg' );?>" alt="Donate">
                 </a>
             </li>

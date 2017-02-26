@@ -1,3 +1,4 @@
+<?php use Roots\Sage\Assets; ?>
 <footer class="site-footer">
   <div class="container site-footer__wrapper">
     <section class="site-footer__section">
@@ -12,6 +13,14 @@
         <p class="site-footer__text-right"><?php echo $text_right; ?></p>
     <?php endif; ?>
     </section>
+    <?php if ( get_field( ACF_DONATE_URL, ACF_OPTION_KEY ) ) : ?>
+    <section class="site-footer__section donate">
+        <a target="_blank" title="Lahjoitus" href="<?php echo get_field( ACF_DONATE_URL, ACF_OPTION_KEY );?>">
+            <img src="<?php echo Assets\asset_path( 'images/donate-logo.svg' );?>" alt="Donate">
+            <span><?php _e( 'Lahjoita kampanjaan', THEME_SLUG ); ?></span>
+        </a>
+    </section>
+    <?php endif; ?>
     <section class="site-footer__section site-footer__logo">
     <?php if ( $image_id = get_field( ACF_FOOTER_LOGO, ACF_OPTION_KEY ) ) :
         $img = wp_get_attachment_image_src( $image_id, 'medium' );
