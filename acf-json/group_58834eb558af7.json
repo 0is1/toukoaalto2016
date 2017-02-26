@@ -43,6 +43,52 @@
             }
         },
         {
+            "sub_fields": [
+                {
+                    "post_type": [],
+                    "taxonomy": [],
+                    "min": "",
+                    "max": 4,
+                    "filters": [
+                        "search",
+                        "post_type",
+                        "taxonomy"
+                    ],
+                    "elements": "",
+                    "return_format": "object",
+                    "key": "field_58b2b19dbe34c",
+                    "label": "Nostoartikkeli",
+                    "name": "frontpage_pinned_post",
+                    "type": "relationship",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    }
+                }
+            ],
+            "min": 0,
+            "max": 1,
+            "layout": "table",
+            "button_label": "",
+            "collapsed": "",
+            "key": "field_58b2b19dbe34b",
+            "label": "Nostoartikkelit",
+            "name": "frontpage_pinned_posts",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
             "default_value": "Kansanedustaja, Vihreiden varapuheenjohtaja ja kaupunginvaltuutettu Jyv\u00e4skyl\u00e4st\u00e4",
             "new_lines": "br",
             "maxlength": "",
@@ -535,5 +581,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1486902035
+    "modified": 1488112868
 }
