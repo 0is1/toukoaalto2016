@@ -1,7 +1,7 @@
 <?php
 
 namespace Roots\Sage\Extras;
-
+use Roots\Sage\Assets;
 use Roots\Sage\Setup;
 
 /**
@@ -111,3 +111,13 @@ function nav_class( $classes, $item ) {
 	return $classes;
 }
 add_filter( 'nav_menu_css_class' , __NAMESPACE__ . '\\nav_class', 10, 2 );
+
+// add a favicon
+function blog_favicon() {
+?>
+  <link rel="shortcut icon" type="image/png" href="<?php echo Assets\asset_path( 'images/favicon.png' );?>" />
+<?php
+}
+
+// Load Favicon in Header Section
+add_action( 'wp_head', __NAMESPACE__ . '\\blog_favicon' );
