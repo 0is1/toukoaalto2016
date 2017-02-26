@@ -31,10 +31,10 @@ $query = new WP_Query(
         <article <?php post_class();?>>
             <a href="<?php echo get_permalink(); ?>" title="<?php the_title() ?>">
                 <h1><?php the_title() ?></h1>
-                <div class='post-content'>
-                    <?php the_excerpt(); ?>
-                </div>
             </a>
+            <div class='post-content'>
+                <?php the_excerpt(); ?>
+            </div>
       </article>
     <?php
     endwhile;
