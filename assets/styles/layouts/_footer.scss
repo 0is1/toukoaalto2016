@@ -1,5 +1,5 @@
 .site-footer{
-    background-color: $brand-secondary;
+    background-color: $brand-primary;
     margin-top: 1rem;
     padding: 1rem;
     width: 100vw;
@@ -15,6 +15,31 @@
         @include media-breakpoint-up(sm){
             max-width: 50%;
         };
+        &.donate{
+            background-color: $brand-primary;
+            border: 1px solid $white;
+            border-radius: $border-radius;
+            padding: 0;
+            text-align: center;
+            width: 100%;
+            @include media-breakpoint-up(md){
+                width: auto;
+            }
+            &:hover{
+                background-color: lighten($brand-primary, 10);
+            }
+            a{
+                align-items: center;
+                display: flex;
+                padding: 1rem;
+                &:hover{
+                    color: $white;
+                }
+                img{
+                    max-width: 50px;
+                }
+            }
+        }
     }
     &__logo{
         max-width: 100%;
@@ -25,5 +50,8 @@
     }
     a{
         color: $white;
+    }
+    .created{
+        font-size: .777rem;
     }
 }

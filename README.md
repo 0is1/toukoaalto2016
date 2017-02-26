@@ -1,8 +1,8 @@
 # Touko Aalto 2017
-WordPress theme for toukoaalto.fi (version 2017)
+WordPress theme for toukoaalto.fi (version 2017) built on Sage
 
 ## TODO
-* Define what to do :)
+* Frontpage highlight posts / special themes for election?
 
 ---
 

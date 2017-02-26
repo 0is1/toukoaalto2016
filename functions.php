@@ -30,6 +30,8 @@ define( 'IMAGE_SIZE_WIDE_XL', 'thumbnail-wide-xl' );
 
 // ACF
 define( 'ACF_OPTION_KEY', 'option' );
+define( 'ACF_PINNED_POSTS', 'frontpage_pinned_posts' );
+define( 'ACF_PINNED_POST', 'frontpage_pinned_post' );
 define( 'ACF_ENABLE_WP_POSTS', 'enable_wp_posts_newsfeed' );
 define( 'ACF_FRONT_POST_COUNT', 'wp_blog_visible_posts_count' );
 define( 'ACF_ENABLE_FACEBOOK_PAGE_BOX', 'enable_facebook_page_box' );
