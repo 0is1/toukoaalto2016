@@ -80,6 +80,13 @@
         @include media-breakpoint-up(md){
             width: calc(50% - 1rem);
         }
+        &:only-of-type{
+            margin: 0 0 1rem;
+            width: 100%;
+            img{
+                width: 100%;
+            }
+        }
         .text{
             display: block;
             padding: 1rem;
