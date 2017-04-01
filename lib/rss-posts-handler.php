@@ -178,7 +178,37 @@ function setup_rss_schedule() {
 
 add_action( 'wp', __NAMESPACE__ . '\\setup_rss_schedule' );
 
-// Run rss data once a day
+// Run rss data once a day or when called via API
 add_action( 'schedule_daily_rss_data', function(){
 	apply_filters( __NAMESPACE__ . '\\loop_and_save_rss_feed_posts', null );
 });
+
+
+/**
+* Register route to schedule rss posts
+* Call from cron with
+* curl -d nonce=schedule-rss-posts-sync-request-from-cron http://toukoaalto.fi/wp-json/schedule-rss-posts/v1/sync
+*/
+add_action( 'rest_api_init', function () {
+    register_rest_route( 'schedule-rss-posts/v1', '/sync', array(
+        'methods'  => 'POST',
+        'callback' => __NAMESPACE__ . '\\maybe_schedule_rss_posts',
+    ) );
+});
+
+/**
+* Maybe schedule rss posts
+* @param WP_REST_Request $request
+*
+* @return json (true|false)
+*/
+function maybe_schedule_rss_posts( \WP_REST_Request $request ) {
+	$nonce = $request['nonce'];
+
+    if ( 'schedule-rss-posts-sync-request-from-cron' != $nonce ) {
+        error_log( print_r( 'Invalid nonce!', true ) );
+        return false;
+    }
+    do_action( 'schedule_daily_rss_data' );
+    return true;
+}
