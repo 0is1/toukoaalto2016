@@ -101,7 +101,6 @@ function loop_and_save_rss_feed_posts() {
     				$user = get_user_by( 'login', 'touko' );
     				$user_id = $user ? $user->ID : 1;
     				foreach ( $rss_items as $item ) :
-                        error_log( print_r( $item, true ) );
     					$category_name_array = array();
     					if ( sizeof( $categories = $item->get_categories() ) > 0 ) {
     						foreach ( $categories as $category ) {
@@ -209,6 +208,6 @@ function maybe_schedule_rss_posts( \WP_REST_Request $request ) {
         error_log( print_r( 'Invalid nonce!', true ) );
         return false;
     }
-    do_action( 'schedule_daily_rss_data' );
+    loop_and_save_rss_feed_posts();
     return true;
 }
