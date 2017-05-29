@@ -15,14 +15,14 @@ body {
 blockquote {
     font-style: italic;
     font-weight: 800;
-    font-size: .9rem;
+    font-size: 1.2rem;
     display: block;
-    margin: 1rem 0;
-    padding-left: 2rem;
+    margin: 1.5rem 0;
+    padding-left: 2.5rem;
     position: relative;
     &::before{
         content: "\201C";
-        font-size: 3.5rem;
+        font-size: 4rem;
         font-weight: bold;
         color: #333;
         left: 0;
@@ -30,6 +30,11 @@ blockquote {
         top: -1rem;
     }
 
+}
+ol {
+    > li {
+        margin-bottom: 0.75rem;   
+    }
 }
 img{
     height: auto;
