@@ -12,6 +12,25 @@ body {
     line-height: $line-height;
 }
 
+blockquote {
+    font-style: italic;
+    font-weight: 800;
+    font-size: .9rem;
+    display: block;
+    margin: 1rem 0;
+    padding-left: 2rem;
+    position: relative;
+    &::before{
+        content: "\201C";
+        font-size: 3.5rem;
+        font-weight: bold;
+        color: #333;
+        left: 0;
+        position: absolute;
+        top: -1rem;
+    }
+
+}
 img{
     height: auto;
     max-width: 100%;
